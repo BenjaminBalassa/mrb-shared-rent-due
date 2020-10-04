@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs')%>
+</head>
+<body>
+    <div class="container" id="page-container">
+        <header>
+            <!--NAV include-->
+            <%- include('./partials/nav.ejs') %> 
+        </header>
+        <div class="container" id="body-container">
+            <% if(page == 'dashboard') {%>
+                <%- include('./partials/dashboard/dashboard.ejs') %>
+            <% } %>
+            <% if(page == 'cleaning') {%>
+                <%- include('./partials/cleaning/cleaning.ejs') %>
+            <% } %>
+            <% if(page == 'bills') {%>
+                <%- include('./partials/bills/bills.ejs') %>
+            <% } %>
+            <% if(page == '404') {%>
+                <%- include('./partials/404.ejs') %>
+            <% } %>
+        </div>
+        <footer></footer>
+    </div>
+    <%- include('./partials/bootstrap-js.ejs') %> 
+</body>
+</html>
