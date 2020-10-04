@@ -6,7 +6,7 @@ const CLO = require('./controller/CleaningOrder')
 const mongoose = require('mongoose')
 
 
-const uri = 'mongodb+srv://adminBenjamin:RT65qwery@mrb-shared-rent-clus.eyclc.mongodb.net/mrb-shared-rent-db?retryWrites=true&w=majority'
+const uri = 'mongodb+srv://@mrb-shared-rent-clus.eyclc.mongodb.net/mrb-shared-rent-db?retryWrites=true&w=majority'
 mongoose.connect(uri, { useUnifiedTopology: true, useNewUrlParser: true })
 const mConnect = mongoose.connection
 mConnect.once('open', () => {
